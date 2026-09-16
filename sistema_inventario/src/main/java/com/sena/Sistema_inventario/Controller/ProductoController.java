@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 // Importamos List
 import java.util.List;
@@ -19,6 +20,7 @@ import com.sena.Sistema_inventario.model.Producto;
 // Importamos nuestro servicio
 import com.sena.Sistema_inventario.service.ProductoService;
 
+@CrossOrigin(origins = "*") 
 
 // Indica que esta clase es un controlador REST
 @RestController
