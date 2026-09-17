@@ -21,6 +21,7 @@ public class Producto {
     private String proveedor;
     private Double precio;
     private Integer cantidad;
+    private String marca;
 
     @Column(name = "stock_minimo")
     private Long stockMinimo;
@@ -42,6 +43,15 @@ public class Producto {
     }
 
     // 3. Getters y Setters
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
     public Long getId() {
         return id;
     }
