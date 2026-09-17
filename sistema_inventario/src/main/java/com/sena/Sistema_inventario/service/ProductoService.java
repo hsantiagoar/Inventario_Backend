@@ -1,6 +1,5 @@
 package com.sena.Sistema_inventario.service;
 
-import java.util.Optional;
 import java.util.List;
 import com.sena.Sistema_inventario.model.Producto;
 import com.sena.Sistema_inventario.repository.ProductoRepository;
