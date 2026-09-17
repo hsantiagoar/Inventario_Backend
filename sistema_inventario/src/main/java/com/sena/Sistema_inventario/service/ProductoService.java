@@ -2,7 +2,6 @@ package com.sena.Sistema_inventario.service;
 
 import java.util.Optional;
 import java.util.List;
-
 import com.sena.Sistema_inventario.model.Producto;
 import com.sena.Sistema_inventario.repository.ProductoRepository;
 
@@ -40,13 +39,12 @@ public class ProductoService {
     }
 
     // =====================================================
-    // BUSCAR PRODUCTO POR ID
+    // BUSCAR PRODUCTO POR Nombre
     // =====================================================
 
-    public Optional<Producto> buscarPorId(Long id) {
+    public List<Producto> buscarPorNombre(String nombre) {
 
-        // Busca un producto por su ID
-        return repository.findById(id);
+        return repository.findByNombreContainingIgnoreCase(nombre);
     }
 
     // =====================================================

@@ -65,19 +65,17 @@ public class ProductoController {
         return service.listarProductos();
     }
 
-
     // =====================================================
-    // GET - BUSCAR PRODUCTO POR ID
+    // GET - BUSCAR PRODUCTO POR Nombre
     // =====================================================
 
     // URL:
     // GET http://localhost:8081/productos/1
-    @GetMapping("/{id}")
-    public Producto buscarPorId(
-            @PathVariable Long id) {
+    @GetMapping("/buscar/{nombre}")
+    public List<Producto> buscarPorNombre(
+            @PathVariable String nombre) {
 
-        // Buscamos el producto mediante su ID
-        return service.buscarPorId(id).orElse(null);
+        return service.buscarPorNombre(nombre);
     }
 
 
